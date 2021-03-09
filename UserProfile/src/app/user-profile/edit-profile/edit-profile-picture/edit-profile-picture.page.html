@@ -10,17 +10,22 @@
 </ion-header> 
 
 <ion-content>
-  <form >
+
     <div class="form-question">
       <ion-label>Upload a photo of yourself:</ion-label>
     </div>
     <div class="form-container">
-      <img src="https://www.w3schools.com/howto/img_snow.jpg">
+      <img src="{{fileUrl || displayPhoto}}">
     </div>
 
-    <div class="form-submit">
-      <ion-button size="large"><input type="file" accept="image/*" ></ion-button>
-      <ion-button size="large" type="submit">Update</ion-button>
+    <div class="form-submit" *ngIf="!file">
+      <ion-button size="large" class="fileUpload">
+        <span>Upload</span>
+        <input type="file" accept="image/*" class="upload" (change)="upload($event)"/>
+    </ion-button>
     </div>
-  </form>
+    <div class="form-submit" *ngIf="file">
+      <ion-button size="large" (click)="uploadImage()">Update</ion-button>
+    </div>
+
 </ion-content>

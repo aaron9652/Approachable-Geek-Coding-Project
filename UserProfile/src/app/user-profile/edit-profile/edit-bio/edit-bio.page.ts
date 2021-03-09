@@ -16,7 +16,7 @@ export class EditBioPage implements OnInit {
   ) { }
 
   userForm: FormGroup = new FormGroup({
-    bio: new FormControl("",[Validators.minLength(1), Validators.required, Validators.pattern(/^\S*$/)]),
+    bio: new FormControl("",[Validators.minLength(1), Validators.required]),
   });
 
   ngOnInit() {

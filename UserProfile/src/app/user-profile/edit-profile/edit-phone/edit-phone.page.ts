@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './edit-phone.page.html',
   styleUrls: ['./edit-phone.page.scss'],
 })
-export class EditPhonePage implements OnInit {
+export class EditPhonePage {
   constructor(
     private fireStore: AngularFirestore,
     private router: Router,
@@ -26,7 +26,6 @@ export class EditPhonePage implements OnInit {
       phone: this.userForm.value.phone,
     });
     this.router.navigate(["user-profile"]);    
-    this.router.dispose();
   }
 
 }

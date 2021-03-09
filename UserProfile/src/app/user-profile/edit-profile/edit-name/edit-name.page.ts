@@ -36,6 +36,5 @@ export class EditNamePage implements OnInit {
       }
     });
     this.router.navigate(["user-profile"]);    
-    this.router.dispose();
   }
 }

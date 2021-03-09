@@ -8,16 +8,6 @@ ion-icon{
     width: 1.5rem;
 }
 
-ion-input{
-    font-weight: 600;
-    font-size: 1.15rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: black;
-    --padding-start: 0px;
-    --padding-top: 0px;
-    --padding-bottom: 0px;
-}
-
 ion-label{
     font-weight: 700;
     font-size: 1.5rem;
@@ -31,6 +21,10 @@ ion-text{
     font-weight: 600;
 }
 
+input{
+    width: 100%;
+    height: 100%;
+}
 img{
     min-width: 20vw;
     min-height: 20vh;
@@ -67,4 +61,20 @@ img{
         width: 100%;
         margin: 5%;
     }
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
 }
