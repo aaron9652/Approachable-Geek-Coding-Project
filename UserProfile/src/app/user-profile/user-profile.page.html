@@ -1,0 +1,55 @@
+<ion-content>
+  <div class="profile-container">
+    <div class="profile-content">
+      <div class="profile-header">
+        <ion-label>Edit Profile</ion-label>
+      </div>
+      <div routerLink="./edit-profile-picture" class="profile-picture">
+          <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1189&q=80">
+          <div class="profile-picture-edit-icon"><ion-icon name="pencil-outline"></ion-icon></div>
+      </div>
+      <ion-list>  
+        <ion-label class="profile-data-headers">
+          Name
+        </ion-label>
+        <ion-item class="profile-data-item" routerLink="./edit-name">
+          <ion-label class="profile-data">
+            {{user?.fullName.firstName + " " + user?.fullName.lastName}}
+          </ion-label>          
+          <ion-icon  name="chevron-forward-outline" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-label class="profile-data-headers">
+          Phone
+        </ion-label>
+        <ion-item class="profile-data-item" routerLink="./edit-phone">
+          <ion-label class="profile-data">
+            {{user?.phone}}
+          </ion-label>
+          <ion-icon  name="chevron-forward-outline" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-label class="profile-data-headers">
+          Email
+        </ion-label>
+        <ion-item class="profile-data-item" routerLink="./edit-email">
+          <ion-label class="profile-data">
+            {{user?.email}}
+          </ion-label>
+          <ion-icon  name="chevron-forward-outline" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-label class="profile-data-headers">
+          Tell us about yourself
+        </ion-label>
+        <ion-item class="profile-data-item" routerLink="./edit-bio">
+          <ion-label class="profile-data">
+            {{user?.bio}}
+          </ion-label>
+          <ion-icon  name="chevron-forward-outline" slot="end"></ion-icon>
+        </ion-item>
+      </ion-list>  
+    </div>
+  </div>
+
+</ion-content>

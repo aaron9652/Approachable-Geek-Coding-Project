@@ -1,0 +1,58 @@
+ion-header::after {
+    background-image: none;
+}
+ion-icon{
+    color: black;
+    margin: 5% 0% 0% 3%;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+ion-input{
+    font-weight: 600;
+    font-size: 1.15rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    --padding-start: 0px;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+}
+
+ion-label{
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: black;
+}
+ion-toolbar{
+    --background: white;
+}
+ion-text{
+    color: #b2b3b3;
+    font-weight: 600;
+}
+.form-header{
+    height: auto;
+}   
+.form-question{
+    margin: 10% 0 5% 5%;
+}
+.form-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.form-div{
+    border: 2px solid rgb(231, 231, 231);
+    margin: 5%;
+    padding: 2%;
+}
+.form-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30vh;
+    ion-button{
+        width: 100%;
+        margin: 5%;
+    }
+}

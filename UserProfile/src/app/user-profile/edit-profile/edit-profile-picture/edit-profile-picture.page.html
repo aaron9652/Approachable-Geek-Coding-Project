@@ -1,0 +1,26 @@
+<ion-header>
+  
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="../../user-profile">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content>
+  <form >
+    <div class="form-question">
+      <ion-label>Upload a photo of yourself:</ion-label>
+    </div>
+    <div class="form-container">
+      <img src="https://www.w3schools.com/howto/img_snow.jpg">
+    </div>
+
+    <div class="form-submit">
+      <ion-button size="large"><input type="file" accept="image/*" ></ion-button>
+      <ion-button size="large" type="submit">Update</ion-button>
+    </div>
+  </form>
+</ion-content>

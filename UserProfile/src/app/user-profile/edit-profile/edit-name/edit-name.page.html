@@ -1,0 +1,36 @@
+<ion-header>
+  
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="../../user-profile">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content>
+  <div class="form-question">
+    <ion-label>What's your name?</ion-label>
+  </div>
+  <form [formGroup]="userForm" (ngSubmit)="updateName()">
+  <div class="form-container">
+    <div class="form-div">
+      <ion-text>
+        First Name 
+      </ion-text>
+      <ion-input type="text" formControlName="firstName"></ion-input>
+    </div>
+    <div class="form-div">
+      <ion-text>
+        Last Name 
+      </ion-text>
+      <ion-input type="text" formControlName="lastName"></ion-input>
+    </div>
+  </div>
+  
+  <div class="form-submit">
+    <ion-button size="large" type="submit" [disabled]="!userForm.valid">Update</ion-button>
+  </div>
+</form>
+</ion-content>
