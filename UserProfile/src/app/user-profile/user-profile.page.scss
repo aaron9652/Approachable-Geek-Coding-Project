@@ -21,8 +21,8 @@ ion-list {
 
 img{
     border-radius: 50%;
-    width: 115px;
-    height: 115px;
+    width: 125px;
+    height: 125px;
     border: 4px solid #4169e1;
     object-fit: cover;
     transform: translateX(16px);
@@ -90,4 +90,5 @@ img{
 }
 .profile-data {
     margin: 0px;
+    font-weight: 600;
 }

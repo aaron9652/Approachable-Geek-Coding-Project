@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireStorage } from '@angular/fire/storage';
+import { Router } from '@angular/router';
 import { finalize, map } from 'rxjs/operators';
 import { user } from 'src/app/shared/models/user';
 
@@ -16,6 +17,7 @@ export class EditProfilePicturePage implements OnInit {
   constructor(
     private fireStorage: AngularFireStorage,
     private fireStore: AngularFirestore,
+    private router: Router,
   ) { }
 
   async ngOnInit() {
@@ -49,8 +51,14 @@ export class EditProfilePicturePage implements OnInit {
             photoURL: url,
           });
         });
-      })
+      }) 
    )
-  .subscribe()
+  .subscribe(element =>{
+    console.log(element.state);
+    while(true){
+      if(element.state != "running") this.router.navigate(["user-profile"]); 
+      return;  
+     }
+  });  
   }
 }

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { StatusBar } from '@ionic-native/status-bar/ngx'
 import { user } from 'src/app/shared/models/user';
 import { map } from 'rxjs/operators';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-user-profile',
@@ -12,18 +13,23 @@ import { map } from 'rxjs/operators';
 })
 export class UserProfilePage {
   user: user;
-  name: 'name';
   constructor(
     private statusBar: StatusBar,
     private router: Router,
     private fireStore: AngularFirestore,
+    private platform: Platform,
     ) { }
 
   async ionViewDidEnter() {
-    if(this.statusBar){
-      this.statusBar.overlaysWebView(true);
-      this.statusBar.backgroundColorByHexString('#fffff');
-    }
+    // if(this.statusBar){
+
+    // }
+    this.platform.ready().then(() => {
+      this.statusBar.backgroundColorByName("black");
+      this.statusBar.show();
+      // this.statusBar.backgroundColorByHexString('#4169e1');
+      
+  });
     await this.fireStore.collection("users").doc("00001")
     .get()
     .pipe(map(doc => {

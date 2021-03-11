@@ -26,22 +26,10 @@ input{
     height: 100%;
 }
 img{
-    min-width: 20vw;
-    min-height: 20vh;
-    max-width: 90vw;
-    max-height: 90vh;
+    width: 300px;
+    height: 300px;
     aspect-ratio: 1/1;
-}
-.form-header{
-    height: auto;
-}   
-.form-question{
-    margin: 10% 0 5% 5%;
-}
-.form-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    object-fit: cover;
 }
 .form-div{
     width: 90%;

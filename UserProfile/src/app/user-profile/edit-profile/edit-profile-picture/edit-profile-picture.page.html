@@ -19,13 +19,13 @@
     </div>
 
     <div class="form-submit" *ngIf="!file">
-      <ion-button size="large" class="fileUpload">
-        <span>Upload</span>
+      <ion-button class="submitButton fileUpload" expand="full" size="large">
+        <span>Upload new photo</span>
         <input type="file" accept="image/*" class="upload" (change)="upload($event)"/>
     </ion-button>
     </div>
     <div class="form-submit" *ngIf="file">
-      <ion-button size="large" (click)="uploadImage()">Update</ion-button>
+      <ion-button class="submitButton" expand="full" size="large" (click)="uploadImage()">Update</ion-button>
     </div>
 
 </ion-content>

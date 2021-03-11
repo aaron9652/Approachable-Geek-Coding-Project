@@ -35,5 +35,22 @@ ion-toolbar, ion-header{
     --border-width: none;
     --border-style: none;
     background-color: white;    
+}
 
+.form-question{
+    margin: 40px 0 5% 5%;
+}
+.form-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.form-header{
+    height: auto;
+} 
+.submitButton{
+    --background: black;
+    --background-activated: rgb(37, 37, 37);
+    --color: white;
+    text-transform: none;
 }
