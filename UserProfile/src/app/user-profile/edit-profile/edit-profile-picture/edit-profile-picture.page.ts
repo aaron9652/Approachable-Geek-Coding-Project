@@ -46,19 +46,16 @@ export class EditProfilePicturePage implements OnInit {
     task.snapshotChanges().pipe(
       finalize(() => {
         fileRef.getDownloadURL()
-        .subscribe((url: string) => {
-          this.fireStore.collection('users').doc('00001').update({
+        .subscribe(async (url: string) => {
+          await this.fireStore.collection('users').doc('00001').update({
             photoURL: url,
+          })
+          .then(() => {
+            this.router.navigate(["user-profile"]); 
           });
         });
       }) 
    )
-  .subscribe(element =>{
-    console.log(element.state);
-    while(true){
-      if(element.state != "running") this.router.navigate(["user-profile"]); 
-      return;  
-     }
-  });  
+  .subscribe();  
   }
 }
