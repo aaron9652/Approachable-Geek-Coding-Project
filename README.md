@@ -1,6 +1,6 @@
 # Approachable-Geek-Coding-Project
 
-Before running the user profile editor, your device will need some tools.
+Before running the user profile editor as an Android application, your device will need some tools. However, you may run the application through your browser by running the ```ionic serve``` command in the **userprofile** directory. 
 
 Some of these tools may require setting up, such as Java JDK or Android SDK.
 
@@ -13,6 +13,8 @@ Some of these tools may require setting up, such as Java JDK or Android SDK.
   * This will give you our Java JDK for Java development. 
 * ###### [Gradle](https://gradle.org/install/)
   * Gradle will act as the build tool for the application. 
+* ##### [Ionic](https://ionicframework.com/docs/intro/cli)
+  * Ionic framework that runs our application. 
 
 ### Set-up
 After downloading the repository, you need to ensure your tools and their paths on your machine are set up. If any of these tools are not already set-up on your machine, links for configuration are shown below. 
@@ -29,6 +31,16 @@ Navigate to the **userprofile** folder within the project.
 
 Run ```npm install```, this will download any needed packages or dependencies for the project. 
 
+Some packages and dependencies may not install with the application. The following are some instructions for further set-up of the application. 
+
+* Install Angular DevKit ```npm install @angular-devkit/core```
+* Install Firebase ```npm install firebase```
+* Install status bar ```npm install @ionic-native/core```
+* Install web-view ```cordova plugin add cordova-plugin-ionic-webview```
+* Install whitelist ```cordova plugin add cordova-plugin-whitelist```
+
+If other packages happen to be missing from the project and your build fails, they can be added through node.js.
+
 Start Android Studio and start one of your virtual devices. 
 
-After our virtual device is started and connected to the internet, we can run ```ionic cordova emulate android``` in our command line that is navigated to our project.
+After our virtual device is started and connected to the internet, we can run ```ionic cordova emulate android``` in our command line that is navigated to our project. This will build our project and run it through our virtual device. 
