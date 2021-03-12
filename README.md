@@ -22,6 +22,7 @@ After downloading the repository, you need to ensure your tools and their paths 
 * [Android SDK](https://www.dev2qa.com/how-to-set-android-sdk-path-in-windows-and-mac/)
 * [Java JDK](https://www.baeldung.com/java-home-on-windows-7-8-10-mac-os-x-linux)
 * [Gradle](https://gradle.org/install/)
+  * If you run into an issue of Gradle not being found, you might not have permissions in your command line to access those files. You can work-around this issue by running the command line with admin privs.  
 
 After ensuring your tools are set-up correctly, you can open the user profile editor in a command line. 
 
@@ -43,4 +44,4 @@ If other packages happen to be missing from the project and your build fails, th
 
 Start Android Studio and start one of your virtual devices. 
 
-After our virtual device is started and connected to the internet, we can run ```ionic cordova emulate android``` in our command line that is navigated to our project. This will build our project and run it through our virtual device. 
+After the virtual device is started and connected to the internet, we can run ```ionic cordova emulate android``` in our command line that is navigated to the project. This will build the project and run it through our virtual device. 
