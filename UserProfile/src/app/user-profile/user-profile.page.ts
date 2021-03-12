@@ -13,23 +13,16 @@ import { Platform } from '@ionic/angular';
 })
 export class UserProfilePage {
   user: user;
+
   constructor(
     private statusBar: StatusBar,
-    private router: Router,
     private fireStore: AngularFirestore,
     private platform: Platform,
     ) { }
 
   async ionViewDidEnter() {
-    // if(this.statusBar){
 
-    // }
-    this.platform.ready().then(() => {
-      this.statusBar.backgroundColorByName("black");
-      this.statusBar.show();
-      // this.statusBar.backgroundColorByHexString('#4169e1');
-      
-  });
+    //gets user from firebase and maps it to a user object
     await this.fireStore.collection("users").doc("00001")
     .get()
     .pipe(map(doc => {
@@ -38,12 +31,13 @@ export class UserProfilePage {
     .subscribe(user => {
       this.user = user;
     });
+
   }
 
   ngOnDestroy() {
   }
+
   ionViewDidLeave(){
     this.ngOnDestroy();
   } 
-
 }

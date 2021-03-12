@@ -14,6 +14,7 @@
     <div class="form-question">
       <ion-label>Upload a photo of yourself:</ion-label>
     </div>
+
     <div class="form-container">
       <img src="{{fileUrl || displayPhoto}}">
     </div>
@@ -24,6 +25,7 @@
         <input type="file" accept="image/*" class="upload" (change)="upload($event)"/>
     </ion-button>
     </div>
+    
     <div class="form-submit" *ngIf="file">
       <ion-button class="submitButton" expand="full" size="large" (click)="uploadImage()">Update</ion-button>
     </div>

@@ -10,10 +10,11 @@
 </ion-header> 
 
 <ion-content>
+  <div class="form-question">
+    <ion-label>What's your phone number?</ion-label>
+  </div>
+  
   <form [formGroup]="userForm" (ngSubmit)="updatePhone()">
-    <div class="form-question">
-      <ion-label>What's your phone number?</ion-label>
-    </div>
     <div class="form-container">
       <div class="form-div">
         <ion-text>

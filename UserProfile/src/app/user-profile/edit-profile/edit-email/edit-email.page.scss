@@ -1,14 +1,15 @@
 ion-header::after {
     background-image: none;
 }
-ion-icon{
+
+ion-icon {
     color: black;
     margin: 5% 0% 0% 3%;
     height: 1.5rem;
     width: 1.5rem;
 }
 
-ion-input{
+ion-input {
     font-weight: 600;
     font-size: 1.15rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -18,25 +19,29 @@ ion-input{
     --padding-bottom: 0px;
 }
 
-ion-label{
+ion-label {
     font-weight: 700;
     font-size: 1.5rem;
     color: black;
 }
-ion-toolbar{
+
+ion-toolbar {
     --background: white;
 }
-ion-text{
+
+ion-text {
     color: #b2b3b3;
     font-weight: 600;
 }
-.form-div{
+
+.form-div {
     width: 90%;
     border: 2px solid rgb(231, 231, 231);
     margin: 5%;
     padding: 2%;
 }
-.form-submit{
+
+.form-submit {
     display: flex;
     justify-content: center;
     align-items: center;

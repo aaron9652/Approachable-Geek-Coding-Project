@@ -1,4 +1,4 @@
-ion-content{
+ion-content {
     --ion-background-color:white;
     --overflow: hidden;
 }
@@ -9,17 +9,19 @@ ion-icon {
 ion-list {
     background: transparent;
     width: 85%;
+
     ion-item {
         --background: inherit;
         --border-color: rgb(231, 231, 231);
     }
+
     ion-label {
         --color: black;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 }
 
-img{
+img {
     border-radius: 50%;
     width: 125px;
     height: 125px;
@@ -27,12 +29,13 @@ img{
     object-fit: cover;
     transform: translateX(16px);
 }
-.profile-picture{
+
+.profile-picture {
     display: flex;
     flex-direction: row;
 }
 
-.profile-picture-edit-icon{
+.profile-picture-edit-icon {
     position: relative;
     left: -10px;
     top: 10px;
@@ -47,12 +50,14 @@ img{
         height: 1.5em;
     }
 }
+
 .profile-header {
     color: #4169e1;
     font-size: 1.5rem;
     font-weight: 600;
     margin: 20px;
 }
+
 .profile-container {
     height: 100vh;
     width: 100vw;
@@ -61,6 +66,7 @@ img{
     align-items: center;
     margin: auto;
 }
+
 .profile-content{
     display: flex;
     flex-direction: column;
@@ -69,12 +75,14 @@ img{
     margin-top: 15%;
     width: 400px;
 }
+
 .profile-data-item {
     display: flex;
     flex-direction: row; 
     align-items: center;
     margin: auto;
 }
+
 .profile-data-headers {
     font-size: .75rem;
     font-weight: 600;
@@ -82,12 +90,13 @@ img{
     margin-left: 4.5%;
 }
 
-.profile-data-row{
+.profile-data-row {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+
 .profile-data {
     margin: 0px;
     font-weight: 600;

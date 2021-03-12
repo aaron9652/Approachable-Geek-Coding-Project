@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { Router } from '@angular/router';
+import { Platform } from '@ionic/angular';
 import { finalize, map } from 'rxjs/operators';
 import { user } from 'src/app/shared/models/user';
+import { StatusBar } from '@ionic-native/status-bar/ngx'
 
 @Component({
   selector: 'app-edit-profile-picture',
@@ -18,6 +20,8 @@ export class EditProfilePicturePage implements OnInit {
     private fireStorage: AngularFireStorage,
     private fireStore: AngularFirestore,
     private router: Router,
+    private platform: Platform,
+    private statusBar: StatusBar,
   ) { }
 
   async ngOnInit() {
@@ -26,6 +30,10 @@ export class EditProfilePicturePage implements OnInit {
     .pipe(
       map(document => (document.data() as user).photoURL))
     .toPromise();
+      this.platform.ready().then(() => {
+        this.statusBar.styleLightContent();
+        this.statusBar.show();  
+    });
   }
 
   async upload(event) {
@@ -40,9 +48,13 @@ export class EditProfilePicturePage implements OnInit {
 
   async uploadImage(){
     if (!this.file) return;
+
+    //uploads picture to firestorage
     var filePath = "users/00001/photos/profilePhotos/";
     var fileRef = this.fireStorage.ref(filePath)
     var task = this.fireStorage.upload(filePath, this.file);
+
+    //uploads pictureURL to firebase then navigates after getting comformation
     task.snapshotChanges().pipe(
       finalize(() => {
         fileRef.getDownloadURL()

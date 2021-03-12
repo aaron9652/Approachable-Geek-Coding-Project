@@ -16,9 +16,10 @@
     </div>
     <div class="form-container">
       <div class="form-div">
-        <textarea placeholder="Write a little about yourself. Do you like chatting? Are you a smoker? Do you bring pets with you? Etc." formControlName="bio"></textarea>
+        <textarea placeholder="Write a little about yourself. Do you like chatting? Are you a smoker? Do you bring pets with you? Etc." formControlName="bio">{{bio}}</textarea>
       </div>
     </div>
+
     <div class="form-submit">
       <ion-button class="submitButton" expand="full" size="large" type="submit" [disabled]="!userForm.valid">Update</ion-button>
     </div>
