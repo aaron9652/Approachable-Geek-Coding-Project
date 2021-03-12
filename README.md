@@ -35,7 +35,7 @@ Some packages and dependencies may not install with the application. The followi
 
 * Install Angular DevKit ```npm install @angular-devkit/core```
 * Install Firebase ```npm install firebase```
-* Install status bar ```npm install @ionic-native/core```
+* Install ionic-native ```npm install @ionic-native/core```
 * Install web-view ```cordova plugin add cordova-plugin-ionic-webview```
 * Install whitelist ```cordova plugin add cordova-plugin-whitelist```
 
