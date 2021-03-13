@@ -32,11 +32,14 @@ Navigate to the **userprofile** folder within the project.
 
 Run ```npm install```, this will download any needed packages or dependencies for the project. 
 
-Some packages and dependencies may not install with the application. The following are some instructions for further set-up of the application. 
+Some packages and dependencies may not install with the application. The following are some instructions to be ran in your command line for further set-up of the application. 
 
 * Install Angular DevKit ```npm install @angular-devkit/core```
 * Install Firebase ```npm install firebase```
 * Install ionic-native ```npm install @ionic-native/core```
+* Install native-run ```npm i -g native-run```
+* Install cordova ```npm install -g cordova```
+* Ensure the www directory is present ```mkdir www```
 * Install web-view ```cordova plugin add cordova-plugin-ionic-webview```
 * Install whitelist ```cordova plugin add cordova-plugin-whitelist```
 
